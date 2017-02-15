@@ -1,5 +1,9 @@
+import java.util.*;
 
 public class FactRepository{
+	
+	ArrayList<Fact> factsList = new ArrayList<>();
+	
 	public Fact addFact(Fact fact){
 		return fact;
 	}
@@ -10,17 +14,23 @@ public class FactRepository{
 		
 	}
 	public class FactIterator implements Iterator {
-
+		
+		int index;
+		
 		@Override
 		public boolean hasNext() {
-			// TODO Auto-generated method stub
+			if (index < factsList.size()){
+				return true;
+			}
 			return false;
 		}
 
 		@Override
 		public Object next() {
-			// TODO Auto-generated method stub
-			return null;
+	         if(this.hasNext()){
+	             return factsList.get(index++);
+	          }
+	          return null;
 		}
 		
 	}

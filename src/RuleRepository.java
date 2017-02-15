@@ -1,8 +1,13 @@
+import java.util.*;
 
 public class RuleRepository{
+	
+	Map<Question, String> ruleMap = new HashMap<Question, String>();
+	
 	public Question addQuestion(String id, Question question)
 	{
-		return question;
+		ruleMap.put(question, id);
+		return null;
 		
 	}
 	
@@ -13,16 +18,24 @@ public class RuleRepository{
 	
 	public class QuestionIterator implements Iterator{
 
+		int index;
+		
 		@Override
 		public boolean hasNext() {
-			// TODO Auto-generated method stub
+			if (index < ruleMap.size()){
+				return true;
+			}
 			return false;
+
 		}
 
 		@Override
 		public Object next() {
-			// TODO Auto-generated method stub
-			return null;
+	         if(this.hasNext()){
+	             return true;
+	            		 // needs to implement;
+	          }
+	          return null;
 		}
 		
 	}
