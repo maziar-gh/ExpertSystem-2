@@ -1,77 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Rules>
-
 	<Rule id="BaseType">
-
 		<Question>
-
 			“Is it an accident or a crime ?"
-
 		</Question>
-
 		<Answer>
-
 			<Selection value="true">
-
 				<SingleValue value="accident" />
-
 			</Selection>
-
 			<Selection value="false">
-
 				<SingleValue value="crime" />
-
 			</Selection>
 		</Answer>
 	</Rule>
 
 	<Rule id="LivesOrMoney">
-
 		<Question>
-
 			“Is this about an injury or a property damage?"
-
 		</Question>
-
 		<Answer>
-
 			<Selection value="true">
-
 				<SingleValue value="injury" />
-
 			</Selection>
-
 			<Selection value="false">
-
 				<SingleValue value="propertyDamage" />
-
 			</Selection>
 		</Answer>
 	</Rule>
 
 	<Rule id="DeadOrAlive">
-
 		<Question>
-
 			“Is the victim alive?"
-
 		</Question>
-
 		<Answer>
-
 			<Selection value="true">
-
 				<SingleValue value="yes" />
-
 			</Selection>
-
 			<Selection value="false">
-
 				<SingleValue value="no" />
-
 			</Selection>
 		</Answer>
-	</Rule>
-	
-            
+	</Rule>            
 </Rules>
