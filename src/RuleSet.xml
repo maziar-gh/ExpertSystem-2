@@ -1,70 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Rules>
 
-    <Rule id=”BaseType”>
+	<Rule id="BaseType">
 
-        <Question>
+		<Question>
 
-            “Is it an accident or a crime ?”
+			“Is it an accident or a crime ?"
 
-        </Questoion>
+		</Question>
 
-        <Answer>
+		<Answer>
 
-            <Selection value=”true”>
+			<Selection value="true">
 
-                  <SingleValue value=”accident”/>
+				<SingleValue value="accident" />
 
-            </Selection>
+			</Selection>
 
-			<Selection value=”false”>
+			<Selection value="false">
 
-                <SingleValue value=”crime”/>
+				<SingleValue value="crime" />
 
-            </Selection>
-            
-    <Rule id=”LivesOrMoney”>
+			</Selection>
+		</Answer>
+	</Rule>
 
-        <Question>
+	<Rule id="LivesOrMoney">
 
-            “Is this about an injury or a property damage?”
+		<Question>
 
-        </Questoion>
+			“Is this about an injury or a property damage?"
 
-        <Answer>
+		</Question>
 
-            <Selection value=”true”>
+		<Answer>
 
-                  <SingleValue value=”injury”/>
+			<Selection value="true">
 
-            </Selection>
+				<SingleValue value="injury" />
 
-			<Selection value=”false”>
+			</Selection>
 
-                <SingleValue value=”propertyDamage”/>
+			<Selection value="false">
 
-            </Selection>
-     
-    <Rule id=”DeadOrAlive”>
+				<SingleValue value="propertyDamage" />
 
-        <Question>
+			</Selection>
+		</Answer>
+	</Rule>
 
-            “Is the victim alive?”
+	<Rule id="DeadOrAlive">
 
-        </Questoion>
+		<Question>
 
-        <Answer>
+			“Is the victim alive?"
 
-            <Selection value=”true”>
+		</Question>
 
-                  <SingleValue value=”yes”/>
+		<Answer>
 
-            </Selection>
+			<Selection value="true">
 
-			<Selection value=”false”>
+				<SingleValue value="yes" />
 
-                <SingleValue value=”no”/>
+			</Selection>
 
-            </Selection>
+			<Selection value="false">
+
+				<SingleValue value="no" />
+
+			</Selection>
+		</Answer>
+	</Rule>
 	
             
+</Rules>
