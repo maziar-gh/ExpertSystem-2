@@ -22,7 +22,7 @@ public class RuleParser extends XmlParser {
 
 				doc.getDocumentElement().normalize();
 				
-				nodeList = doc.getElementsByTagName("Rules");
+				nodeList = doc.getElementsByTagName("Rule");
 				
 			    } catch (Exception e) {
 			    	System.out.println("Error occured during initialization");
