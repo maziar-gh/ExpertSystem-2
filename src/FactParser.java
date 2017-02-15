@@ -22,7 +22,7 @@ public class FactParser extends XmlParser
 
 				doc.getDocumentElement().normalize();
 				
-				nodeList = doc.getElementsByTagName("Rule");
+				nodeList = doc.getElementsByTagName("eval");
 				
 			    } catch (Exception e) {
 			    	System.out.println("Error occured during initialization");
