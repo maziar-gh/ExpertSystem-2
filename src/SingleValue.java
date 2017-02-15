@@ -1,6 +1,6 @@
 public class SingleValue {
 
-	public SingleValue(String something) {
+	public SingleValue(String param) {
 
 	}
 }

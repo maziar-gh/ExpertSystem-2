@@ -1,6 +1,15 @@
 
 public class RuleRepository {
-	public Iterator getIterator(){
-		return Iterator();
+	public Question addQuestion(String id, Question question)
+	{
+		return question;
+		
 	}
+	
+	public Iterator getIterator()
+	{
+		return null;
+		
+	}
+
 }
