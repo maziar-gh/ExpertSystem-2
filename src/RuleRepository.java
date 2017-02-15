@@ -1,5 +1,5 @@
 
-public class RuleRepository implements Iterator{
+public class RuleRepository{
 	public Question addQuestion(String id, Question question)
 	{
 		return question;
@@ -8,7 +8,22 @@ public class RuleRepository implements Iterator{
 	
 	public Iterator getIterator()
 	{
-		return null;
+		return new QuestionIterator();
+	}
+	
+	public class QuestionIterator implements Iterator{
+
+		@Override
+		public boolean hasNext() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public Object next() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		
 	}
 
