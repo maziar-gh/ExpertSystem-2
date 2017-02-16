@@ -30,12 +30,12 @@ public class RuleRepository{
 		}
 
 		@Override
-		public Object next() {
+		public Question next() {
 	         if(this.hasNext()){
-	             return true;
-	            		 // needs to implement;
-	          }
-	          return null;
+	             Question question = ruleMap.values().toArray(new Question[ruleMap.values().size()])[index++];
+	             return question;
+	          }return null;
+	     
 		}
 		
 	}

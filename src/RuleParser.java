@@ -30,23 +30,24 @@ public class RuleParser extends XmlParser {
 	}
     public RuleRepository getRuleRepository()
     {
-        String filename = "Rules.xml";
+        String filename = "src/RuleSet.xml";
         LoadXmlDocument(filename);
         RuleRepository repository = new RuleRepository();
         for(int i = 0; i<nodeList.getLength(); i++)
         {
         	Node node = nodeList.item(i);
 
-    		if (node.getNodeType() == Node.ELEMENT_NODE) {
 
-    			Element eElement = (Element) node;
-
-    			System.out.println("Rule id : " + eElement.getAttribute("id"));
-    			System.out.println("Question : " + eElement.getElementsByTagName("question").item(0).getTextContent());
-    			System.out.println("Answer : " + eElement.getElementsByTagName("answer").item(0).getTextContent());
-    		}
+            String id = ((Element)node).getAttribute("id");
+            String questionMsg = ((Element) node).getElementsByTagName("Question").item(0).getTextContent();
+            Question question = new Question(questionMsg);
+            Value value = kjsdhfjksdh; // átírni singlebe? 
+            Answer answer = new Answer();
+            answer.addValue(value);
+            question.setAnswerEvaluator(answer);
+            repository.addQuestion(id, question);
         }
         return repository;
-        }
-
+    }
+    
 }

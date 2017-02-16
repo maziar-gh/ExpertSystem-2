@@ -4,8 +4,8 @@ public class FactRepository{
 	
 	ArrayList<Fact> factsList = new ArrayList<>();
 	
-	public Fact addFact(Fact fact){
-		return fact;
+	public void addFact(Fact fact){
+		factsList.add(fact);
 	}
 	
 	public Iterator getIterator()

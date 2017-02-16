@@ -1,18 +1,28 @@
 public class Question {
-
-	public String getQuestion() {
-		return null;
-	}
+	
+	private Answer answerEval;
+	private String question;
 
 	public Question(String question) {
+		this.question = question;
 
 	}
+	
+	public String getQuestion() {
+		return question;
+	}
 
+    public String[] getInputPattern()
+    {
+        return answerEval.getInputPattern();
+    }
+	
 	public void setAnswerEvaluator(Answer answer) {
-
+		 this.answerEval = answer;
 	}
 
 	public boolean getEvaluatedAnswer(String input) {
-		return false;
+        Boolean bool = answerEval.evaluateAnswerbyInput(input);
+        return bool;
 	}
 }

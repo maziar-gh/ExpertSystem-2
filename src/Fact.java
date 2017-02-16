@@ -4,32 +4,36 @@ public class Fact
 {
 	private String id;
 	private String description;
-	public HashMap<String, Boolean> evalMap = new HashMap<>();
-	
+	private HashMap<String, Boolean> fact = new HashMap<>();
+
 	
 	public Fact(String description)
 	{
-		
+		this.description = description;
 	}
+    public void setId(String id)
+    {
+        this.id = id;
+    }
 	public void setFactValueByID(String id, boolean value)
 	{
-		
+		fact.put(id, value);
 	}
 	
 	public Set<String> getIDSet()
 	{
-		return null;
+		return fact.keySet();
 		
 	}
-	public boolean getValueID()
+	public boolean getValueID(String id)
 	{
-		return false;
+		return fact.get(id);
 		
 	}
 	
 	public String getDescription()
 	{
-		return null;
+		return description;
 		
 	}
 	
