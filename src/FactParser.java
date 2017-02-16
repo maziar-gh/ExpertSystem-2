@@ -47,9 +47,26 @@ public class FactParser extends XmlParser
 
             Fact fact = new Fact(description);
             fact.setId(factId);
+            
+            getEvals(node, fact);
 
             repository.addFact(fact);
         }
         	return repository;
+    }
+    
+    private void getEvals(Node node, Fact fact)
+    {
+    	Node evalsNode = ((Element) node).getElementsByTagName("Evals").item(0);
+    	NodeList evals = ((Element) evalsNode).getElementsByTagName("Eval");
+    	String ID;
+    	boolean value;
+    	for(int i = 0; i < evals.getLength(); i++)
+    	{
+    		Node eval = evals.item(i);
+    		value = Boolean.parseBoolean(eval.getTextContent().trim());
+    		ID = ((Element) eval).getAttribute("id");
+    		fact.setFactValueByID(ID, value);
+    	}
     }
 }

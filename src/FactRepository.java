@@ -34,4 +34,8 @@ public class FactRepository{
 		}
 		
 	}
+	public ArrayList<Fact> getFactsList()
+	{
+		return factsList;
+	}
 }

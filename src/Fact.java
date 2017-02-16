@@ -36,6 +36,10 @@ public class Fact
 		return description;
 		
 	}
+	public HashMap<String, Boolean> getFact()
+	{
+		return fact;
+	}
 	
 	
 }

@@ -2,11 +2,11 @@ import java.util.*;
 
 public class RuleRepository{
 	
-	Map<Question, String> ruleMap = new HashMap<Question, String>();
+	Map<String, Question> ruleMap = new HashMap<String, Question>();
 	
 	public Question addQuestion(String id, Question question)
 	{
-		ruleMap.put(question, id);
+		ruleMap.put(id, question);
 		return null;
 		
 	}
@@ -38,6 +38,13 @@ public class RuleRepository{
 	     
 		}
 		
+		
 	}
+
+	public Map<String, Question> getRuleMap()
+	{
+		return ruleMap;
+	}
+
 
 }

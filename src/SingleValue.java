@@ -6,20 +6,19 @@ public class SingleValue extends Value {
 	public SingleValue(String param) {
 		trueValue = param;
 	}
-	
+	@Override
 	public String [] getTrueValue(){
 		 String [] value = new String [1];
 		 value[0] = trueValue;
 		 return value;
 	}
-	
+	@Override
 	public String [] getFalseValue(){
 		 String [] value = new String [1];
 		 value[0] = falseValue;
 		 return value;
 	}
-	
-	void setFalseValue(String param){
+	public void setFalseValue(String param){
 		falseValue = param;
 	}
 

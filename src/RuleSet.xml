@@ -22,11 +22,11 @@
 				<SingleValue value="injury" />
 			</Selection>
 			<Selection value="false">
-				<SingleValue value="propertyDamage" />
+				<SingleValue value="property damage" />
 			</Selection>
 		</Answer>
 	</Rule>
-	<Rule> id="DeadOrAlive">
+	<Rule id="DeadOrAlive">
 		<Question>
 			“Is the victim alive?"
 		</Question>
@@ -38,31 +38,5 @@
 				<SingleValue value="no" />
 			</Selection>
 		</Answer>
-	</Rule>
-	<Rule id="Fire?">
-        <Question>
-            “Is there fire ?"
-        </Question>
-        <Answer>
-            <Selection value="true">
-                  <SingleValue value="yes"/>
-            </Selection>
-			<Selection value="false">
-                <SingleValue value="no"/>
-            </Selection>
-        </Answer>
-   	</Rule>
-    <Rule id="PropertyOrPersonalInjury">
-        <Question>
-            “Does someone got hurt ?"
-        </Question>
-        <Answer>
-            <Selection value="true">
-                  <SingleValue value="yes"/>
-            </Selection>
-			<Selection value="false">
-                <SingleValue value="no"/>
-            </Selection>
-		</Answer>
-	</Rule>            
+	</Rule>           
 </Rules>

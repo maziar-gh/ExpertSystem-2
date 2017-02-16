@@ -30,6 +30,7 @@ public class RuleParser extends XmlParser {
 	}
     public RuleRepository getRuleRepository()
     {
+    	System.out.println("shitttttttttttt");
         String filename = "src/RuleSet.xml";
         LoadXmlDocument(filename);
         RuleRepository repository = new RuleRepository();
@@ -41,13 +42,31 @@ public class RuleParser extends XmlParser {
             String id = ((Element)node).getAttribute("id");
             String questionMsg = ((Element) node).getElementsByTagName("Question").item(0).getTextContent();
             Question question = new Question(questionMsg);
-            Value value = kjsdhfjksdh; // átírni singlebe? 
+            Value value = getValue(node);
             Answer answer = new Answer();
             answer.addValue(value);
             question.setAnswerEvaluator(answer);
             repository.addQuestion(id, question);
         }
         return repository;
+    }
+    public Value getValue(Node node)
+    {
+		Element value = (Element) node;
+		Node answernode = value.getElementsByTagName("Answer").item(0);
+		Element answer = (Element) answernode;
+		NodeList selectionNode = answer.getElementsByTagName("Selection");
+		
+		Node trueValue = selectionNode.item(0);
+		Node falseValue = selectionNode.item(1);
+		
+		String trueV = ((Element)((Element) trueValue).getElementsByTagName("SingleValue").item(0)).getAttribute("value");
+		String falseV = ((Element)((Element) falseValue).getElementsByTagName("SingleValue").item(0)).getAttribute("value");
+		
+		Value returnValue = new SingleValue(trueV);
+		((SingleValue)returnValue).setFalseValue(falseV);
+		
+    	return returnValue;
     }
     
 }
