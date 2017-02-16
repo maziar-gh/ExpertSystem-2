@@ -50,6 +50,21 @@ public class ESProvider
 		
 	}
 	
+	public void printLogo() {
+		String [] logo = new String [] {"  ___  __ __                                                       ",
+                  		  " / _  \\/_ /_ |                                                      ",
+                  		  "| (_) | | || |   ___ _ __ ___   ___ _ __ __ _  ___ _ __   ___ _   _ ",
+                  		  " \\__, | | || |  / _ \\ '_ ` _ \\ / _ \\ '__/ _` |/ _ \\ '_ \\ / __| | | |",
+                  		  "   / /  | || | |  __/ | | | | |  __/ | | (_| |  __/ | | | (__| |_| |",
+                  		  "  /_/   |_||_|  \\___|_| |_| |_|\\___|_|  \\__, |\\___|_| |_|\\___|\\__, |",
+                  		  "                                         __/ |                 __/ |",
+                  		  "                                        |___/                 |___/ ",
+                  		  "                            Expert system ™ \n\n"};
+		for(String line: logo) {
+  			System.out.println(line);
+		}
+	}
+	
 	public String evaluate()
 	{
 		for(Fact fact : factRepo.getFactsList())
