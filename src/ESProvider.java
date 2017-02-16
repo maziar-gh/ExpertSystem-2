@@ -21,13 +21,10 @@ public class ESProvider
 
 	public void collectAnswers()
 	{
-		System.out.println("shit");
-		System.out.println(ruleRepo.getRuleMap().size());
 		Scanner reader = new Scanner(System.in);  
 		Question question;
 		for(String ID : ruleRepo.getRuleMap().keySet())
 		{
-			System.out.println("anyad");
 			question = ruleRepo.getRuleMap().get(ID);
 			boolean goodInput = false;
 			while(goodInput == false)
@@ -55,17 +52,11 @@ public class ESProvider
 	
 	public String evaluate()
 	{
-		System.out.println(factRepo.getFactsList().size());
-		System.out.println(resultMap.size());
-		for(String id: resultMap.keySet())
-		{
-			System.out.println(resultMap.get(id).toString() + "     " + id);
-		}
 		for(Fact fact : factRepo.getFactsList())
 		{
-			System.out.println(fact.getFact().size());
 			if(fact.getFact().equals(resultMap))
 			{
+				System.out.println("");
 				return fact.getDescription();
 			}
 		}

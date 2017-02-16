@@ -30,7 +30,6 @@ public class RuleParser extends XmlParser {
 	}
     public RuleRepository getRuleRepository()
     {
-    	System.out.println("shitttttttttttt");
         String filename = "src/RuleSet.xml";
         LoadXmlDocument(filename);
         RuleRepository repository = new RuleRepository();
