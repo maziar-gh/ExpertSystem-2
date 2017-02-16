@@ -1,7 +1,12 @@
-import java.util.Set;
+import java.util.*;
 
 public class Fact
 {
+	private String id;
+	private String description;
+	public HashMap<String, Boolean> evalMap = new HashMap<>();
+	
+	
 	public Fact(String description)
 	{
 		
