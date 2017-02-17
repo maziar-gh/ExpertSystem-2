@@ -32,7 +32,7 @@ public class FactParser extends XmlParser
 	}
     public FactRepository getFactRepository()
     {
-        String filename = "src/knowledgebase.xml";
+        String filename = "C:/Users/lugos/workspace/ExpertSystem/ExpertSystems/src/knowledgebase.xml";
         String description = "";
         LoadXmlDocument(filename);
         FactRepository repository = new FactRepository();

@@ -30,7 +30,7 @@ public class RuleParser extends XmlParser {
 	}
     public RuleRepository getRuleRepository()
     {
-        String filename = "src/RuleSet.xml";
+        String filename = "C:/Users/lugos/workspace/ExpertSystem/ExpertSystems/src/RuleSet.xml";
         LoadXmlDocument(filename);
         RuleRepository repository = new RuleRepository();
         for(int i = 0; i<nodeList.getLength(); i++)
