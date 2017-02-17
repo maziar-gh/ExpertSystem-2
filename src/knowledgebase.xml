@@ -33,4 +33,59 @@
             </Eval>
         </Evals>
     </Fact>
+    <Fact id="firefighters+amb+cop">
+        <Description value="Sending firefighters ambulances and cops!" />
+        <Evals>
+            <Eval id="BaseType">true
+            </Eval>
+            <Eval id="LivesOrMoney">false
+            </Eval>
+            <Eval id="DeadOrAlive">true
+            </Eval>
+        </Evals>
+    </Fact>
+    <Fact id="cops">
+        <Description value="Sending the cops!" />
+        <Evals>
+            <Eval id="BaseType">false
+            </Eval>
+            <Eval id="LivesOrMoney">false
+            </Eval>
+            <Eval id="DeadOrAlive">true
+            </Eval>
+        </Evals>
+    </Fact>
+    <Fact id="cops2">
+        <Description value="Sending the cops!" />
+        <Evals>
+            <Eval id="BaseType">false
+            </Eval>
+            <Eval id="LivesOrMoney">true
+            </Eval>
+            <Eval id="DeadOrAlive">false
+            </Eval>
+        </Evals>
+    </Fact>
+    <Fact id="cops+amb">
+        <Description value="Sending cops and ambulances!" />
+        <Evals>
+            <Eval id="BaseType">false
+            </Eval>
+            <Eval id="LivesOrMoney">true
+            </Eval>
+            <Eval id="DeadOrAlive">true
+            </Eval>
+        </Evals>
+    </Fact>
+    <Fact id=".|.">
+        <Description value="SUX THE BE YOU!" />
+        <Evals>
+            <Eval id="BaseType">true
+            </Eval>
+            <Eval id="LivesOrMoney">true
+            </Eval>
+            <Eval id="DeadOrAlive">false
+            </Eval>
+        </Evals>
+    </Fact>
 </KM>
