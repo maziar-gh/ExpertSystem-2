@@ -6,6 +6,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.URL;
 
 public class RuleParser extends XmlParser {
 	
@@ -30,7 +31,8 @@ public class RuleParser extends XmlParser {
 	}
     public RuleRepository getRuleRepository()
     {
-        String filename = "C:/Users/lugos/workspace/ExpertSystem/ExpertSystems/src/RuleSet.xml";
+		URL location = RuleParser.class.getProtectionDomain().getCodeSource().getLocation();
+        String filename = location.getPath() + "/RuleSet.xml";
         LoadXmlDocument(filename);
         RuleRepository repository = new RuleRepository();
         for(int i = 0; i<nodeList.getLength(); i++)

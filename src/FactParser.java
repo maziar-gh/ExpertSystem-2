@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.URL;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -32,7 +33,8 @@ public class FactParser extends XmlParser
 	}
     public FactRepository getFactRepository()
     {
-        String filename = "C:/Users/lugos/workspace/ExpertSystem/ExpertSystems/src/knowledgebase.xml";
+		URL location = RuleParser.class.getProtectionDomain().getCodeSource().getLocation();
+		String filename = location.getPath() + "/knowledgebase.xml";
         String description = "";
         LoadXmlDocument(filename);
         FactRepository repository = new FactRepository();
